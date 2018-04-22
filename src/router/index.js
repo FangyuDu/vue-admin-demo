@@ -36,7 +36,20 @@ export const constantRouterMap = [
       component: () => import('@/views/dashboard/index')
     }]
   },
-
+  {
+    path: '/project',
+    component: Layout,
+    name: 'project',
+    meta: { title: '项目', icon: 'table' },
+    children: [
+      {
+        path: 'list',
+        name: 'projectList',
+        component: () => import('@/views/project/list'),
+        meta: { title: ' 项目列表', icon: 'table' }
+      }
+    ]
+  },
   {
     path: '/example',
     component: Layout,
