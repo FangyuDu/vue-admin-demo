@@ -4,6 +4,7 @@
       el-button(@click.native="getList") 刷新
       el-button(:disabled="true") 创建新任务
       el-button(:loading="downloadLoading" @click.native="handleDownload") 导出
+      el-button(:disabled="true") 截图
     .content
       el-table.tableList(:data="list")
         el-table-column(label="序号" type="index" align="center")
