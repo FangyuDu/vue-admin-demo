@@ -34,4 +34,11 @@ export default {
   height: 100%;
   width: 100%;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /deep/ .app-main {
+    flex: 1;
+  }
+}
 </style>

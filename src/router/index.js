@@ -37,54 +37,28 @@ export const constantRouterMap = [
     }]
   },
   {
-    path: '/project',
+    path: '/codee',
     component: Layout,
-    name: 'project',
-    meta: { title: '项目', icon: 'table' },
+    name: 'codee',
+    meta: { title: '信息', icon: 'table' },
     children: [
       {
-        path: 'list',
-        name: 'projectList',
-        component: () => import('@/views/project/list'),
-        meta: { title: ' 项目列表', icon: 'table' }
-      }
-    ]
-  },
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'info',
+        name: 'codeeInfo',
+        component: () => import('@/views/codee/info'),
+        meta: {
+          title: '基础信息',
+          icon: 'table'
+        }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'home',
+        name: 'codeeHome',
+        component: () => import('@/views/codee/index'),
+        meta: { title: '临时进度', icon: 'table' }
       }
     ]
   },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
-      }
-    ]
-  },
-
   { path: '*', redirect: '/404', hidden: true }
 ]
 

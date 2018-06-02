@@ -9,10 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  color: #333;
 }
 
 html {
   box-sizing: border-box;
+  height: 100%;
+}
+body {
+  height: 100%; 
 }
 
 ul,
@@ -24,7 +29,7 @@ p {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 div:focus{
@@ -55,9 +60,14 @@ a:hover {
   }
 }
 
+
 //main-container全局样式
+#app {
+  height: 100%;
+}
 .app-main{
-  min-height: 100%
+  min-height: 100%;
+  display: flex;
 }
 
 .app-container {

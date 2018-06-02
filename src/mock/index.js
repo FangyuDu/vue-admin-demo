@@ -51,12 +51,3 @@ Mock.mock('/api/projectList', 'get', req => {
   }
 })
 
-Mock.mock('/api/projectUpdate', 'post', req => {
-  const row = JSON.parse(req.body)
-  const _old = getRowByCode(row.code)
-  Object.assign(_old, row)
-  return {
-    success: true,
-    data: []
-  }
-})
